@@ -4,7 +4,7 @@
 
 | Episode | Working title | Manufacturer-specific? | Status |
 |---|---|---|---|
-| 01 | NOTIFIER FCM-1 vs FRM-1: supervised output vs dry contacts | Yes, verify against official Honeywell/NOTIFIER documents | Script and shot plan drafted |
+| 01 | How a generic fire alarm control module works | No — generic unbranded devices | Script and shot plan drafted |
 | 02 | What does an SLC actually do? | No | Script below |
 | 03 | Class A vs Class B: what changes on an open? | No; qualify circuit topology and fault behavior | Script below |
 | 04 | What does an end-of-line resistor supervise? | No; topology dependent | Script below |
