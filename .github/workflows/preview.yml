@@ -1,6 +1,12 @@
-name: Manual video prototype (quality review required)
+name: NICET video production drafts
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/render.py'
+      - 'content/episode.txt'
+      - '.github/workflows/preview.yml'
 permissions:
   contents: read
 jobs:
@@ -8,33 +14,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Check local publishing hour
-        id: gate
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-        run: |
-          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$(TZ=America/Detroit date +%H)" = "18" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          fi
       - uses: actions/checkout@v4
-        if: steps.gate.outputs.run == 'true'
       - name: Install open-source tools
-        if: steps.gate.outputs.run == 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg espeak-ng fonts-dejavu-core
           python -m pip install Pillow==11.3.0
-      - name: Render animated educational draft
-        if: steps.gate.outputs.run == 'true'
+      - name: Render technical proof of concept (not approved for publishing)
         run: |
           python scripts/render.py
           ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 output/preview.mp4 | grep -q '720,1280'
-      - name: Upload video draft (NOT PUBLISHED)
-        if: steps.gate.outputs.run == 'true'
+      - name: Upload review artifact (NOT PUBLISHED)
         uses: actions/upload-artifact@v4
         with:
-          name: nicet-video-draft
+          name: nicet-review-draft
           path: output/preview.mp4
-          retention-days: 7
+          retention-days: 14
