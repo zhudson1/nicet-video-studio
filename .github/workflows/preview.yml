@@ -1,22 +1,43 @@
-name: Render preview
+name: Daily NICET video draft
 on:
   workflow_dispatch:
+  schedule:
+    # 6 PM Eastern is 22:00 UTC in daylight time, 23:00 UTC in standard time.
+    - cron: '0 22,23 * * *'
 permissions:
   contents: read
 jobs:
   render:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
+      - name: Check local publishing hour
+        id: gate
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$(TZ=America/Detroit date +%H)" = "18" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
-      - name: Install free tools
+        if: steps.gate.outputs.run == 'true'
+      - name: Install open-source tools
+        if: steps.gate.outputs.run == 'true'
         run: sudo apt-get update && sudo apt-get install -y ffmpeg espeak-ng
-      - name: Generate video
+      - name: Render narrated video draft
+        if: steps.gate.outputs.run == 'true'
         run: |
           mkdir -p output
           espeak-ng -v en-us -s 145 -f content/episode.txt -w output/voice.wav
-          ffmpeg -y -f lavfi -i "color=c=0x101c2b:s=1080x1920:r=30" -i output/voice.wav -vf "drawtext=text='FIRE ALARM FUNDAMENTALS':fontcolor=white:fontsize=52:x=(w-text_w)/2:y=500,drawtext=text='CONTROL MODULE BASICS':fontcolor=cyan:fontsize=44:x=(w-text_w)/2:y=650" -c:v libx264 -preset ultrafast -pix_fmt yuv420p -c:a aac -shortest output/preview.mp4
+          ffmpeg -hide_banner -loglevel error -y -f lavfi -i "color=c=0x101c2b:s=1080x1920:r=30" -i output/voice.wav -vf "drawtext=text='FIRE ALARM FUNDAMENTALS':fontcolor=white:fontsize=52:x=(w-text_w)/2:y=500,drawtext=text='CONTROL MODULE BASICS':fontcolor=cyan:fontsize=44:x=(w-text_w)/2:y=650" -c:v libx264 -preset ultrafast -pix_fmt yuv420p -c:a aac -shortest output/preview.mp4
           test -s output/preview.mp4
-      - uses: actions/upload-artifact@v4
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height,codec_name -of csv=p=0 output/preview.mp4 | grep -q 'h264,1080,1920'
+      - name: Upload video draft (NOT PUBLISHED)
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/upload-artifact@v4
         with:
-          name: nicet-video-preview
+          name: nicet-video-draft
           path: output/preview.mp4
+          retention-days: 7
