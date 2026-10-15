@@ -1,0 +1,3 @@
+A fire alarm control module can provide an output controlled by a compatible fire alarm control panel.
+Depending on the listed module and approved design, that output may control a relay or a supervised circuit.
+Always verify the exact manufacturer's instructions and the approved system design.
