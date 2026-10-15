@@ -25,15 +25,12 @@ jobs:
         if: steps.gate.outputs.run == 'true'
       - name: Install open-source tools
         if: steps.gate.outputs.run == 'true'
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg espeak-ng
-      - name: Render narrated video draft
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg espeak-ng fonts-dejavu-core\n          python -m pip install Pillow==11.3.0
+      - name: Render animated educational draft
         if: steps.gate.outputs.run == 'true'
         run: |
-          mkdir -p output
-          espeak-ng -v en-us -s 145 -f content/episode.txt -w output/voice.wav
-          ffmpeg -hide_banner -loglevel error -y -f lavfi -i "color=c=0x101c2b:s=1080x1920:r=30" -i output/voice.wav -vf "drawtext=text='FIRE ALARM FUNDAMENTALS':fontcolor=white:fontsize=52:x=(w-text_w)/2:y=500,drawtext=text='CONTROL MODULE BASICS':fontcolor=cyan:fontsize=44:x=(w-text_w)/2:y=650" -c:v libx264 -preset ultrafast -pix_fmt yuv420p -c:a aac -shortest output/preview.mp4
-          test -s output/preview.mp4
-          ffprobe -v error -select_streams v:0 -show_entries stream=width,height,codec_name -of csv=p=0 output/preview.mp4 | grep -q 'h264,1080,1920'
+          python scripts/render.py
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 output/preview.mp4 | grep -q '720,1280'
       - name: Upload video draft (NOT PUBLISHED)
         if: steps.gate.outputs.run == 'true'
         uses: actions/upload-artifact@v4
