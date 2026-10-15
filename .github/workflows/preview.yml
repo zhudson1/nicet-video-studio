@@ -25,7 +25,7 @@ jobs:
         if: steps.gate.outputs.run == 'true'
       - name: Install open-source tools
         if: steps.gate.outputs.run == 'true'
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg espeak-ng fonts-dejavu-core\n          python -m pip install Pillow==11.3.0
+        run: |\n          sudo apt-get update\n          sudo apt-get install -y ffmpeg espeak-ng fonts-dejavu-core\n          python -m pip install Pillow==11.3.0
       - name: Render animated educational draft
         if: steps.gate.outputs.run == 'true'
         run: |
