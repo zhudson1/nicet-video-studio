@@ -1,0 +1,22 @@
+name: Render preview
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install free tools
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg espeak-ng
+      - name: Generate video
+        run: |
+          mkdir -p output
+          espeak-ng -v en-us -s 145 -f content/episode.txt -w output/voice.wav
+          ffmpeg -y -f lavfi -i "color=c=0x101c2b:s=1080x1920:r=30" -i output/voice.wav -vf "drawtext=text='FIRE ALARM FUNDAMENTALS':fontcolor=white:fontsize=52:x=(w-text_w)/2:y=500,drawtext=text='CONTROL MODULE BASICS':fontcolor=cyan:fontsize=44:x=(w-text_w)/2:y=650" -c:v libx264 -preset ultrafast -pix_fmt yuv420p -c:a aac -shortest output/preview.mp4
+          test -s output/preview.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nicet-video-preview
+          path: output/preview.mp4
