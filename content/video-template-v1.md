@@ -22,21 +22,23 @@
 | 30–40 s | Real-world application | Match cut to equipment | One documented example |
 | 40–48 s | Recap and CTA | Slow hero push | 'CHECK MODEL • RATINGS • DRAWINGS' |
 
-## Brand-specific asset rules
-1. Source physical reference images from manufacturer documentation and record document revision/date.
-2. Use the exact model name only when the geometry, terminal legends, and functional behavior are checked.
-3. No fake manufacturer logos, fabricated labels, or imagined internal electronics.
-4. If manufacturer imagery cannot be used legally or verified, use an explicitly generic device and remove branding.
-5. Manufacturer installation manual and approved system design take priority over generalized educational claims.
+## Generic device asset rules
+1. Use realistic, manufacturer-neutral fire alarm devices with no logos, model numbers, or copied trade dress.
+2. Do not fabricate specific terminal designations, ratings, listings, or installation diagrams.
+3. Keep electrical functions technically correct; a supervised output and dry-contact relay are different functions.
+4. Label all conceptual signal-flow or circuit visuals 'CONCEPTUAL — NOT FIELD WIRING'.
+5. Verify general principles against authoritative manufacturer instructions and applicable standards; don't attribute generic devices to a brand.
 
 ## Episode 01 scene content
-**Title:** NOTIFIER FCM-1 vs FRM-1 — Different Jobs
-**Hook:** 'THEY LOOK SIMILAR. THEY AREN’T.'
-**FCM-1:** Supervised output control module. Use official verified photo, then an explicitly conceptual supervised-output diagram.
-**FRM-1:** Dry-contact relay module. Use official verified photo, then an explicitly conceptual Form-C relay diagram.
-**Critical takeaway:** 'DRY CONTACT ≠ POWER SUPPLY'.
-**CTA:** 'VERIFY THE EXACT MODEL'.
-Refer to `content/episode-01-verified-script.md`.
+**Title:** How a Fire Alarm Control Module Works
+**Hook:** 'HOW DOES A PANEL CONTROL EQUIPMENT?'
+**Scene 1:** Generic addressable module macro hero shot; no logos or model identifiers.
+**Scene 2:** Panel sends an addressable command over a conceptual SLC to a compatible module.
+**Scene 3:** Conceptual supervised control output shown with a separately supplied compatible load.
+**Scene 4:** Separate generic relay-module comparison, clearly distinguished from supervised control module; dry contacts do not supply power.
+**Scene 5:** Application example shown symbolically, not as a field wiring diagram.
+**Scene 6:** Recap: 'CHECK MODULE TYPE • LISTING • APPROVED DRAWINGS'.
+No manufacturer claims or fabricated terminal legends.
 
 ## Asset folder convention
 `assets/episode-XX/shot-01.mp4` ... `shot-06.mp4`; `voiceover.wav`; `captions.srt`; `sources.md`; `qa.md`. Never upload an unverified manufacturer's reference as if it were original footage.
