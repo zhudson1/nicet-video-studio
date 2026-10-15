@@ -1,9 +1,6 @@
-name: Daily NICET video draft
+name: Manual video prototype (quality review required)
 on:
   workflow_dispatch:
-  schedule:
-    # 6 PM Eastern is 22:00 UTC in daylight time, 23:00 UTC in standard time.
-    - cron: '0 22,23 * * *'
 permissions:
   contents: read
 jobs:
