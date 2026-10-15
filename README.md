@@ -1,17 +1,28 @@
-# NICET Video Studio
+# NICET Daily Video Studio
 
-Free-first proof of concept for vertical fire alarm education videos.
+Free-first, iPhone-manageable prototype for fire alarm educational videos.
 
-## Current status
-- Sample script and local video rendering workflow
-- Manual GitHub Actions trigger (no daily schedule yet)
-- No external accounts or publishing tokens required
-- No automatic social posting yet
+## Implemented
+- Scheduled **draft render** via GitHub Actions at approximately 6 PM Eastern (America/Detroit, daylight saving aware)
+- Manual test trigger: Actions → Daily NICET video draft → Run workflow
+- Open-source FFmpeg and eSpeak NG on GitHub-hosted runners
+- 1080 × 1920 H.264 MP4 with AAC audio, artifact retained for 7 days
+- Basic file and codec/dimension validation
 
-The sample is a simple narrated slide video, not cinematic AI-generated footage. Review technical accuracy and visual quality before enabling any publishing.
+## Not yet implemented
+- Cinematic AI-generated 3D animation
+- Natural-sounding premium voice
+- Automatic technical fact verification against authoritative documentation
+- Social account authorization or publishing to TikTok, YouTube, Facebook, Instagram
+- Unique daily scripts: the current prototype repeats the sample script
 
-## Run
-Open Actions > Render preview > Run workflow. Download the MP4 from the completed run's Artifacts section.
+**No social posting is enabled.** This is a draft-only proof of concept. GitHub scheduled workflows may be delayed and do not guarantee delivery at exactly 6 PM. Free GitHub Actions usage is subject to account and repository quotas.
 
-## Safety
-Do not commit passwords or API keys. Keep publishing disabled until platform integrations and technical review are configured.
+## Security
+The repository was observed as **public** on October 15, 2026. Change visibility in GitHub repository Settings → General → Danger Zone → Change repository visibility if you want a private repository. Do not commit credentials. Add future API keys as encrypted Actions secrets.
+
+## Test
+Open Actions → Daily NICET video draft → Run workflow. After completion, download the `nicet-video-draft` artifact. Inspect the narration and visuals. This is not yet ready for public release.
+
+## Technical accuracy
+All safety-critical explanations need verification against applicable manufacturer instructions and the approved system design. Do not use an AI-only quality check as a substitute for expert verification.
