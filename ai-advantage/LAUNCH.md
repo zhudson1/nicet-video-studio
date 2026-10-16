@@ -1,3 +1,5 @@
+# Public-facing brand: H Fire Safety
+
 # SUPERSEDED: unified brand decision
 
 This original AI-only launch pack is retained for historical planning. **Do not launch The AI Advantage as a separate brand or social page.** The active strategy is in `content/unified-brand-strategy.md`. AI videos must be adapted to the unified NICET / trades / technology audience.
