@@ -1,31 +1,22 @@
-# Unified Brand — Technology, Trades & AI
+# H Fire Safety — Fire Alarm Education Brand
 
-**Decision:** ONE H Fire Safety social brand and ONE publishing queue, not separate NICET and AI Advantage brands.
+**Public brand:** H Fire Safety
+**Exclusive focus:** Fire alarm systems and NICET Fire Alarm Systems exam preparation.
 
-## Working identity
-**H Fire Safety** (confirmed public-facing brand)
-Tagline: **Learn smarter. Work smarter. Build better.**
-Positioning: fire alarm technology, NICET education, AI productivity and automation for working technicians, contractors and curious professionals.
+## Editorial pillars
+1. Fire alarm system fundamentals: initiating devices, notification appliances, control panels, circuits, interfaces.
+2. Fire alarm installation, inspection, testing, maintenance and troubleshooting concepts.
+3. NICET Fire Alarm Systems Levels I–IV study lessons, practice explanations and code-navigation skills.
+4. Fire alarm system networking, voice evacuation and technical diagrams, always verified against applicable manufacturer instructions and adopted codes.
 
-## Three content pillars
-1. **Fire alarm & NICET education (50%)** — device principles, troubleshooting concepts, network architecture, professional practices. All safety-critical claims require manufacturer/standards review.
-2. **AI for the trades (30%)** — note-taking, service reports, documentation, learning tools, office workflows, accurate product demos.
-3. **Automation & business productivity (20%)** — practical workflows for technicians, contractors, small businesses.
+## Exclusions
+Do not publish general AI technology, AI productivity, automation, business productivity, entrepreneurship or generic professional-development content. Do not market a separate AI Advantage page. Internal software used to create videos is a production implementation detail, **not a content topic**.
 
-## Reframe first 10 episodes
-01. Three AI tools for busy technicians
-02. Write clearer service reports with AI (review required)
-03. Turn a site meeting into action items
-04. Three business automation ideas for contractors
-05. Automate repetitive inspection admin without bypassing compliance
-06. Compare AI assistants for technical note organization, not code authority
-07. Turn one original fire alarm lesson into five educational clips
-08. Five prompts for a service business
-09. Build a $0 draft video workflow with GitHub and FFmpeg
-10. Test a technician productivity workflow with measured results
+## Visual identity
+H Fire Safety logo/name on all video titles and outros. Educational, captivating, realistic vertical short videos, with clear technical graphics and original demonstrations. All safety-critical information must be checked against applicable standards, approved design and manufacturer documentation.
 
-## Brand and editorial rules
-One handle, one logo, one bio link, one content calendar, one newsletter and analytics funnel. Do not use 'The AI Advantage' as a separate social identity. Preserve the existing NICET website as a specialized educational offering. Monetization: relevant training products, original templates, vetted affiliate tools, sponsorships and platform programs when eligible. Keep zero-subscription production rule.
+## Zero-cost production
+Use existing GitHub Actions, Python and FFmpeg where free-tier limits allow, plus original recordings and appropriately licensed footage. Human review required before publishing.
 
-## Publishing
-One shared review-only queue. Do not publish automatically. Videos about fire alarm installations are conceptual and must not replace approved drawings, manufacturer instructions or applicable codes.
+## Publishing and monetization
+One H Fire Safety social presence and editorial queue. Lead viewers toward the H Fire Safety / NICET training website and original fire alarm study resources. Do not promise NICET endorsement or official certification.
