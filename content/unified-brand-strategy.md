@@ -1,9 +1,9 @@
 # Unified Brand — Technology, Trades & AI
 
-**Decision:** ONE social brand and ONE publishing queue, not separate NICET and AI Advantage brands.
+**Decision:** ONE H Fire Safety social brand and ONE publishing queue, not separate NICET and AI Advantage brands.
 
 ## Working identity
-**NICET Video Studio** (working title; public-facing name to confirm)
+**H Fire Safety** (confirmed public-facing brand)
 Tagline: **Learn smarter. Work smarter. Build better.**
 Positioning: fire alarm technology, NICET education, AI productivity and automation for working technicians, contractors and curious professionals.
 
