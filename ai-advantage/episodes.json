@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "3 AI TOOLS TO TRY",
+    "narration": "Three AI tools worth testing this week: ChatGPT can structure rough notes into an email or checklist. NotebookLM can help explore your uploaded reference sources. And n8n can connect repetitive tasks into workflows. Review every output and start with one real problem.",
+    "cta": "Follow for practical AI workflows.",
+    "status": "draft-needs-fact-check-and-original-footage"
+  },
+  {
+    "id": 2,
+    "title": "STOP WRITING EMAILS FROM SCRATCH",
+    "narration": "Try this prompt: turn my bullet points into a clear email. Keep the facts unchanged, use a friendly professional tone, and list any missing details instead of inventing them. Review before sending.",
+    "cta": "Save this prompt.",
+    "status": "draft-needs-fact-check-and-original-footage"
+  },
+  {
+    "id": 3,
+    "title": "ONE MEETING FIVE DELIVERABLES",
+    "narration": "With permission to record, a meeting transcript can become a summary, action list, decision log, follow up email and project checklist. Check each item against the original recording before sharing.",
+    "cta": "Get the checklist.",
+    "status": "draft-needs-fact-check-and-original-footage"
+  },
+  {
+    "id": 4,
+    "title": "TEST THREE AI BUSINESS IDEAS",
+    "narration": "Start with a problem, not a product. Test a niche newsletter, an automation setup service, or a reusable business template. Talk to potential customers before spending money.",
+    "cta": "Get the starter kit.",
+    "status": "draft-needs-fact-check-and-original-footage"
+  },
+  {
+    "id": 5,
+    "title": "AUTOMATE A REPEATED TASK",
+    "narration": "Find a task you repeat every week. Map the inputs, the decision, and the output. Build a small workflow with a self hosted automation tool and test with sample data before trusting it.",
+    "cta": "Save this workflow.",
+    "status": "draft-needs-fact-check-and-original-footage"
+  },
+  {
+    "id": 6,
+    "title": "PICK AI BY THE TASK",
+    "narration": "Instead of declaring one assistant the winner, give two tools the same real task. Compare factual accuracy, editing time, price, and privacy. Keep the tool that fits your workflow.",
+    "cta": "Follow for real comparisons.",
+    "status": "draft-needs-fact-check-and-original-footage"
+  },
+  {
+    "id": 7,
+    "title": "ONE VIDEO MANY IDEAS",
+    "narration": "Start with footage you own or have permission to reuse. Transcribe it, find distinct ideas, write new commentary, and create individual clips with a clear takeaway. A crop and captions alone are not enough.",
+    "cta": "Get the content template.",
+    "status": "draft-needs-fact-check-and-original-footage"
+  },
+  {
+    "id": 8,
+    "title": "FIVE PROMPTS FOR BUSINESS",
+    "narration": "Try prompts for customer replies, meeting summaries, project risks, process checklists and content outlines. Give context, set constraints, and ask the model to flag uncertain details.",
+    "cta": "Get the prompt pack.",
+    "status": "draft-needs-fact-check-and-original-footage"
+  },
+  {
+    "id": 9,
+    "title": "A ZERO SUBSCRIPTION WORKFLOW",
+    "narration": "Use a local script, scheduled GitHub workflow, and a review folder to assemble a draft. Free software does not mean unlimited cloud compute, so monitor usage and keep a manual publishing step.",
+    "cta": "Get the workflow.",
+    "status": "draft-needs-fact-check-and-original-footage"
+  },
+  {
+    "id": 10,
+    "title": "TEST AN AI PRODUCTIVITY ROUTINE",
+    "narration": "Choose one repetitive task, time your usual process, then test an AI assisted version. Record corrections and quality issues. Share the actual time saved, including review time, rather than an invented result.",
+    "cta": "See the results.",
+    "status": "draft-needs-fact-check-and-original-footage"
+  }
+]
