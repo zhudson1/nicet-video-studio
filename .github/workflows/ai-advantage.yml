@@ -1,0 +1,33 @@
+name: AI Advantage review draft
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: "Episode number (1-10)"
+        required: true
+        default: "1"
+        type: choice
+        options: ["1","2","3","4","5","6","7","8","9","10"]
+permissions:
+  contents: read
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg espeak-ng fonts-dejavu-core
+          python -m pip install Pillow==11.3.0
+      - name: Render draft (never publish)
+        env:
+          EPISODE: ${{ inputs.episode }}
+        run: |
+          python scripts/render_ai_advantage.py
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 output/ai-advantage/episode-*-REVIEW-ONLY.mp4 | grep -q '720,1280'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ai-advantage-review-draft
+          path: output/ai-advantage/*REVIEW-ONLY.mp4
+          retention-days: 7
