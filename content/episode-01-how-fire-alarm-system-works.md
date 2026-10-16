@@ -1,3 +1,29 @@
+# PRODUCTION REVISION — HYPER-REALISTIC STANDARD
+
+**User rejected previous prototype quality. Do not present static slides or eSpeak narration as publishable.**
+
+## Required visual treatment
+- Hyper-realistic, documentary-grade depictions of generic fire alarm equipment; use actual licensed/original equipment footage where possible.
+- Camera movement should be purposeful: controlled push-in on a detector, macro detail of panel status, corridor horn/strobe, wide establishing shot.
+- Accurate physical geometry, wiring, labels, LEDs, and operation. Never simulate physically misleading actions (e.g. smoke detector itself transmitting directly to a horn without the control unit).
+- Overlay minimal labels and animated signal-path lines on real equipment imagery; no flat-text-only scenes.
+- 1080x1920 portrait, 24–30 fps, cinematic lighting and sharp typography, mobile safe zones.
+- If genuine hyper-realistic footage is unavailable at $0, mark scene as asset-blocked rather than passing off a slide deck as final.
+
+## Voice and sound
+- Kind, firm, clear, credible American English narration, conversational pace ~145–160 wpm.
+- Natural prosody and warm timbre, no robotic eSpeak voice in the published cut.
+- Voice forward in mix, subtle ambience, no overpowering music.
+- Use local high-quality neural TTS if an accessible zero-cost runtime is available; otherwise request an approved narration recording. Do not claim premium neural narration has been generated until it has been rendered and heard.
+
+## Editorial / review
+- ~35–45 seconds, original script, technically reviewed.
+- Show actual alarm flow: initiating device -> control unit -> programmed outputs; optional off-premises monitoring/auxiliary controls.
+- User watches final MP4 in chat and explicitly approves before Metricool schedules or publishes.
+- Status remains **NOT READY TO POST** until video, narration, licensing and QA pass.
+
+---
+
 # H Fire Safety — Episode 01: How a Fire Alarm System Works
 
 **Status:** Review-only; NOT approved for publishing.
