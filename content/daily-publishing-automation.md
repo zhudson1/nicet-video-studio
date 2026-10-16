@@ -1,3 +1,9 @@
+# APPROVAL POLICY — USER CONFIRMED
+
+**Mandatory human approval for every TikTok video.** Generate drafts daily, present the MP4, proposed caption and hashtags in ChatGPT, and do not schedule or publish until the user explicitly approves that specific video. A missed approval means no publication. Target publishing time is 6 PM America/Detroit, contingent on approval. No unattended publishing. Metricool brand 7457463 is connected to TikTok; no TikTok post has been scheduled. Automated delivery of GitHub artifact files directly into ChatGPT is not yet implemented and must not be represented as active.
+
+---
+
 # Daily publishing automation — implementation contract
 
 Goal: generate and publish one H Fire Safety educational TikTok video per day. No general AI/automation/business content. No paid recurring services.
